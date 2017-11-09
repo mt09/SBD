@@ -1,0 +1,21 @@
+User list
+
+<table class="table table-striepd table-hover">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Console</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |u| %>
+            <tr>
+                <td><%= u.email %></td>
+                <td>
+                    <%= link_to "Edit", "#" %>
+                    <%= link_to "Delete", "#" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
